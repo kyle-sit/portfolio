@@ -1,0 +1,13 @@
+@reference "../../index.css";
+
+.project-grid {
+  @apply mx-auto max-w-5xl px-6 pt-6 pb-16;
+}
+
+.project-grid-title {
+  @apply mb-8 text-center text-2xl font-semibold text-white sm:text-3xl;
+}
+
+.project-grid-list {
+  @apply flex flex-col gap-10;
+}

@@ -1,0 +1,70 @@
+@reference "../../index.css";
+
+.project-card-wrapper {
+  @apply rounded-xl p-[2px] shadow-lg transition duration-200;
+  @apply bg-gradient-to-r from-sky-300 via-blue-500 via-indigo-600 to-violet-700;
+}
+
+.project-card-wrapper:hover {
+  @apply -translate-y-0.5 shadow-xl shadow-violet-700/40;
+}
+
+.project-card {
+  @apply rounded-[calc(0.75rem-2px)] bg-zinc-800 p-6 sm:p-8;
+}
+
+.project-card-title {
+  @apply text-2xl font-semibold text-white;
+}
+
+.project-card-summary {
+  @apply mt-3 max-w-3xl text-base leading-7 text-white;
+}
+
+.project-card-tech {
+  @apply mt-5 flex flex-wrap gap-2;
+}
+
+.project-card-tech-item {
+  @apply rounded-full border border-violet-700 bg-zinc-800 px-2.5 py-0.5 text-xs text-white;
+}
+
+.project-card-images {
+  @apply mt-6 flex flex-col items-center gap-4 overflow-hidden;
+}
+
+.project-card-images--mobile {
+  @apply py-4;
+}
+
+.project-card-image {
+  @apply w-full rounded-sm object-contain;
+}
+
+.project-card-image--mobile {
+  @apply max-h-[480px] w-auto rounded-md object-contain;
+}
+
+.project-card-actions {
+  @apply mt-6 flex gap-3;
+}
+
+.project-card-button {
+  @apply rounded-md border border-violet-700 bg-zinc-800 px-4 py-2 text-sm font-medium text-white shadow-sm transition duration-200;
+}
+
+.project-card-button:hover {
+  @apply -translate-y-0.5 bg-violet-950/60 shadow-md shadow-violet-700/50;
+}
+
+.project-card-button--live {
+  @apply bg-violet-700;
+}
+
+.project-card-button--live:hover {
+  @apply bg-violet-600 shadow-lg shadow-violet-700/60;
+}
+
+.project-card-button--disabled {
+  @apply cursor-not-allowed rounded-md border border-violet-900 bg-zinc-800 px-4 py-2 text-sm font-medium text-zinc-500;
+}

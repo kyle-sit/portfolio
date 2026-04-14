@@ -1,0 +1,55 @@
+@reference "../../index.css";
+
+.hero {
+  @apply mx-auto max-w-5xl px-6 pt-24 pb-4 sm:pt-32;
+}
+
+.hero-title {
+  @apply text-center text-4xl font-bold tracking-tight text-white sm:text-6xl;
+}
+
+.hero-links {
+  @apply mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm;
+}
+
+.hero-link-wrapper {
+  @apply rounded-md p-[2px] shadow-sm transition duration-200;
+  @apply bg-gradient-to-r from-sky-300 via-blue-500 via-indigo-600 to-violet-700;
+}
+
+.hero-link-wrapper:hover {
+  @apply -translate-y-0.5 shadow-lg shadow-violet-700/50;
+}
+
+.hero-link {
+  @apply block rounded-[calc(0.375rem-2px)] bg-zinc-800 px-4 py-2 font-medium text-white transition;
+}
+
+.hero-link:hover {
+  @apply bg-zinc-700;
+}
+
+.hero-body {
+  @apply mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-10;
+}
+
+.hero-avatar-wrapper {
+  @apply flex-shrink-0 rounded-full p-[3px] shadow-lg;
+  @apply bg-gradient-to-r from-sky-300 via-blue-500 via-indigo-600 to-violet-700;
+}
+
+.hero-avatar {
+  @apply h-40 w-40 rounded-full border-2 border-zinc-900 object-cover sm:h-48 sm:w-48;
+}
+
+.hero-bio {
+  @apply flex-1 text-center sm:text-left;
+}
+
+.hero-bio-paragraph {
+  @apply text-base leading-7 text-white sm:text-lg;
+}
+
+.hero-bio-paragraph + .hero-bio-paragraph {
+  @apply mt-4;
+}

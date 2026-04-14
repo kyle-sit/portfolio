@@ -1,8 +1,9 @@
 export interface Project {
   title: string;
-  description: string;
-  image: string;
+  summary: string;
+  images: string[];
   tech: string[];
+  layout?: "desktop" | "mobile";
   liveUrl?: string;
   repoUrl?: string;
 }

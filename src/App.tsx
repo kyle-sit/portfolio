@@ -1,12 +1,13 @@
 import { Hero } from "./components/Hero";
 import { ProjectGrid } from "./components/ProjectGrid";
+import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+    <div className="app">
       <Hero />
       <ProjectGrid />
-      <footer className="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
+      <footer className="app-footer">
         © {new Date().getFullYear()} Kyle Sit
       </footer>
     </div>

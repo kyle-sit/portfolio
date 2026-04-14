@@ -1,0 +1,9 @@
+@reference "./index.css";
+
+.app {
+  @apply min-h-screen bg-zinc-950 text-white;
+}
+
+.app-footer {
+  @apply border-t border-zinc-800 py-8 text-center text-sm text-white;
+}
