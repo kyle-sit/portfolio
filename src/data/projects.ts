@@ -26,7 +26,7 @@ export const workProjects: Project[] = [
       {
         src: "/portfolio/videos/mobile-customer-selection.mp4",
         layout: "mobile",
-        title: "ML Issue selection",
+        title: "ML Issue Selection",
         description:
           "The model predicts a customer's most likely contact reason and surfaces it first, determining all subsequent options after each selection. Here I led the design, testing, and coordination with our ML team to provide the second iteration of our start return workflows.",
       },
@@ -50,14 +50,14 @@ export const workProjects: Project[] = [
       {
         src: "/portfolio/videos/mobile-free-text.mp4",
         layout: "mobile",
-        title: "AI free-text answer",
+        title: "AI Free-Text Answer",
         description:
-          "I built the generated answer box by creating the component and seting up the lambda function to call our AI services, gated by an API gateway.",
+          "I built the generated answer box by creating the component and seting up the lambda function to call our LLM service, gated by an API gateway.",
       },
       {
         src: "/portfolio/videos/unauth-mobile.mp4",
         layout: "mobile",
-        title: "Unauthenticated flow",
+        title: "Un-Authenticated Landing Page",
         description:
           "This was the first project I led in my most recent position, developing the experience from end to end in our legacy framework of JSP and Javascript.",
       },
