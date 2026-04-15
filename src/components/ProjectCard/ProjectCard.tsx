@@ -1,9 +1,8 @@
 import type { Project } from "../../types";
+import { isVideo } from "../../utils/media";
 import "./ProjectCard.css";
 
 export function ProjectCard({ project }: { project: Project }) {
-  const isMobile = project.layout === "mobile";
-
   return (
     <div className="project-card-wrapper">
       <article className="project-card">
@@ -16,22 +15,51 @@ export function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
-        <div
-          className={`project-card-images${
-            isMobile ? " project-card-images--mobile" : ""
-          }`}
-        >
-          {project.images.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`${project.title} screenshot ${i + 1}`}
-              loading="lazy"
-              className={
-                isMobile ? "project-card-image--mobile" : "project-card-image"
-              }
-            />
-          ))}
+        <div className="project-card-media">
+          {project.media.map((item, i) => {
+            const mobile = item.layout === "mobile";
+            const figureClass = mobile
+              ? "project-card-media-item--mobile"
+              : "project-card-media-item";
+            return (
+              <figure key={i} className={figureClass}>
+                {item.title && (
+                  <h4 className="project-card-media-title">{item.title}</h4>
+                )}
+                {isVideo(item.src) ? (
+                  <video
+                    src={item.src}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className={
+                      mobile
+                        ? "project-card-video--mobile"
+                        : "project-card-video"
+                    }
+                  />
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.title ?? `${project.title} screenshot ${i + 1}`}
+                    loading="lazy"
+                    className={
+                      mobile
+                        ? "project-card-image--mobile"
+                        : "project-card-image"
+                    }
+                  />
+                )}
+                {item.description && (
+                  <figcaption className="project-card-media-description">
+                    {item.description}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          })}
         </div>
         <div className="project-card-actions">
           {project.repoUrl && (
@@ -51,7 +79,7 @@ export function ProjectCard({ project }: { project: Project }) {
               rel="noreferrer"
               className="project-card-button project-card-button--live"
             >
-              Live link
+              View live
             </a>
           ) : (
             <button
@@ -59,7 +87,7 @@ export function ProjectCard({ project }: { project: Project }) {
               disabled
               className="project-card-button--disabled"
             >
-              Live Link (Coming Soon)
+              View live (Coming Soon)
             </button>
           )}
         </div>

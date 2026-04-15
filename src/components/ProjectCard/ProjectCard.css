@@ -29,24 +29,38 @@
   @apply rounded-full border border-violet-700 bg-zinc-800 px-2.5 py-0.5 text-xs text-white;
 }
 
-.project-card-images {
-  @apply mt-6 flex flex-col items-center gap-4 overflow-hidden;
+.project-card-media {
+  @apply mt-6 flex flex-wrap items-start justify-evenly gap-y-6 overflow-hidden;
 }
 
-.project-card-images--mobile {
-  @apply py-4;
+.project-card-media-item {
+  @apply flex w-full flex-col items-center gap-3;
 }
 
-.project-card-image {
+.project-card-media-item--mobile {
+  @apply flex max-w-[320px] flex-col items-center gap-3;
+}
+
+.project-card-media-title {
+  @apply max-w-full text-center text-sm font-semibold text-white;
+}
+
+.project-card-media-description {
+  @apply max-w-full text-center text-xs leading-snug text-white/70;
+}
+
+.project-card-image,
+.project-card-video {
   @apply w-full rounded-sm object-contain;
 }
 
-.project-card-image--mobile {
-  @apply max-h-[480px] w-auto rounded-md object-contain;
+.project-card-image--mobile,
+.project-card-video--mobile {
+  @apply max-h-[480px] w-auto max-w-full rounded-md object-contain;
 }
 
 .project-card-actions {
-  @apply mt-6 flex gap-3;
+  @apply mt-6 flex justify-center gap-3;
 }
 
 .project-card-button {
