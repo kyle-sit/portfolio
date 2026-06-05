@@ -1,0 +1,23 @@
+/* Shared scroll-reveal animation — applied to `.rv` elements, toggled `.in` by useReveal. */
+.rv {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .85s var(--ease), transform .85s var(--ease);
+}
+
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+.rv.d1 { transition-delay: .07s; }
+.rv.d2 { transition-delay: .14s; }
+.rv.d3 { transition-delay: .21s; }
+.rv.d4 { transition-delay: .28s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
+}

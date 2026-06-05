@@ -1,4 +1,5 @@
 import { Icon } from "../Icon";
+import "./Contact.css";
 
 export function Contact() {
   return (
@@ -14,7 +15,7 @@ export function Contact() {
             <span className="grad-text">with real impact.</span>
           </h2>
           <p>Have a project, a role, or an idea worth chasing? My inbox is always open.</p>
-          <div className="hero-cta">
+          <div className="btn-row">
             <a className="btn btn-pri" href="mailto:kyle.sit.sd@gmail.com">
               Say hello <Icon.arrow className="ico" />
             </a>

@@ -1,0 +1,53 @@
+/* Shared buttons + the CTA button row (used by Hero and Contact). */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-family: var(--sans);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease);
+}
+
+.btn .ico {
+  transition: transform .3s var(--ease);
+}
+
+.btn-pri {
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 8px 22px -8px rgba(124, 58, 237, .7);
+}
+
+.btn-pri:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -10px rgba(124, 58, 237, .85);
+}
+
+.btn-pri:hover .ico {
+  transform: translate(3px, -3px);
+}
+
+.btn-ghost {
+  color: var(--fg);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--line-2);
+}
+
+.btn-ghost:hover {
+  transform: translateY(-2px);
+  background: var(--hover);
+  border-color: var(--line-2);
+}
+
+.btn-row {
+  margin-top: 34px;
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}

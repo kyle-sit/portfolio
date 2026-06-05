@@ -1,6 +1,7 @@
 import { nav } from "../../data/nav";
 import { socials } from "../../data/socials";
 import { assetUrl } from "../../utils/scroll";
+import "./Footer.css";
 
 export function Footer() {
   return (

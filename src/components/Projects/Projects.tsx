@@ -2,6 +2,7 @@ import { Icon } from "../Icon";
 import { projects } from "../../data/projects";
 import { isVideo } from "../../utils/media";
 import type { MediaItem, Project } from "../../types";
+import "./Projects.css";
 
 const TAG_MAX = 4;
 

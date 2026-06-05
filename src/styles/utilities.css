@@ -1,0 +1,7 @@
+/* Shared text utilities. */
+.grad-text {
+  color: transparent;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+}

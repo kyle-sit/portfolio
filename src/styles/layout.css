@@ -1,0 +1,53 @@
+/* Shared layout primitives — page container + section heading scaffold. */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 40px);
+}
+
+.sec {
+  padding: clamp(70px, 11vh, 130px) 0;
+}
+
+.sec-head {
+  margin-bottom: clamp(38px, 6vh, 64px);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  margin-bottom: 18px;
+}
+
+.kicker::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.kicker .g {
+  color: var(--violet-2);
+  font-weight: 600;
+}
+
+.sec-title {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -.03em;
+  line-height: 1.04;
+  font-size: clamp(30px, 4.4vw, 52px);
+}
+
+.sec-sub {
+  color: var(--fg-2);
+  margin-top: 14px;
+  font-size: clamp(15px, 1.5vw, 17px);
+  max-width: 460px;
+}

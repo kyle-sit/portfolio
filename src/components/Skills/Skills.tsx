@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { skills } from "../../data/skills";
 import type { SkillItem as SkillItemType } from "../../types";
+import "./Skills.css";
 
 function SkillItem({ s }: { s: SkillItemType }) {
   const [err, setErr] = useState(false);

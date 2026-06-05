@@ -4,6 +4,7 @@ import { roles } from "../../data/roles";
 import { socials } from "../../data/socials";
 import { scrollToId } from "../../utils/scroll";
 import profilePic from "../../assets/profile-pic.png";
+import "./Hero.css";
 
 export function Hero() {
   const role = useTypewriter(roles);
@@ -34,7 +35,7 @@ export function Hero() {
             Software engineer with ~8 years building interfaces, ML / AI integrations, and
             business tools — work designed to have an immediate, tangible impact on people.
           </p>
-          <div className="hero-cta rv in d3">
+          <div className="btn-row rv in d3">
             <a
               className="btn btn-pri"
               href="#projects"

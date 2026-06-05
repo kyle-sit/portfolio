@@ -1,4 +1,5 @@
 import profilePic from "../../assets/profile-pic.png";
+import "./About.css";
 
 export function About() {
   return (

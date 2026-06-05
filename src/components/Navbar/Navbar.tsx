@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { nav } from "../../data/nav";
 import { assetUrl, scrollToId } from "../../utils/scroll";
+import "./Navbar.css";
 
 interface NavbarProps {
   active: string;
