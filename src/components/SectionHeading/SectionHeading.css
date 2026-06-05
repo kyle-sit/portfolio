@@ -1,0 +1,18 @@
+.sec-head {
+  margin-bottom: clamp(38px, 6vh, 64px);
+}
+
+.sec-title {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -.03em;
+  line-height: 1.04;
+  font-size: clamp(30px, 4.4vw, 52px);
+}
+
+.sec-sub {
+  color: var(--fg-2);
+  margin-top: 14px;
+  font-size: clamp(15px, 1.5vw, 17px);
+  max-width: 460px;
+}

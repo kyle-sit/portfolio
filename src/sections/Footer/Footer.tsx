@@ -1,7 +1,15 @@
 import { nav } from "../../data/nav";
 import { socials } from "../../data/socials";
 import { assetUrl } from "../../utils/scroll";
+import { FOOTER_DESCRIPTION } from "../../constants/copy";
 import "./Footer.css";
+
+const BRAND = "Kyle Sit";
+const NAV_HEADING = "Navigate";
+const CONNECT_HEADING = "Connect";
+const COPYRIGHT_TAGLINE = "built with intent.";
+const LOCATION = "San Diego, CA";
+const STATUS = "Available for work";
 
 export function Footer() {
   return (
@@ -10,15 +18,12 @@ export function Footer() {
         <div className="footer-top">
           <div>
             <div className="fbrand">
-              <img src={assetUrl("favicon.svg")} alt="" /> Kyle Sit
+              <img src={assetUrl("favicon.svg")} alt="" /> {BRAND}
             </div>
-            <p className="fdesc">
-              Software engineer based in San Diego, building modern interfaces and AI-backed tools
-              with tangible impact.
-            </p>
+            <p className="fdesc">{FOOTER_DESCRIPTION}</p>
           </div>
           <div>
-            <h5>Navigate</h5>
+            <h5>{NAV_HEADING}</h5>
             <ul>
               {nav.map((n) => (
                 <li key={n.id}>
@@ -28,7 +33,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h5>Connect</h5>
+            <h5>{CONNECT_HEADING}</h5>
             <ul>
               {socials.map((s) => (
                 <li key={s.label}>
@@ -45,10 +50,10 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Kyle Sit — built with intent.</span>
+          <span>© {new Date().getFullYear()} {BRAND} — {COPYRIGHT_TAGLINE}</span>
           <div className="footer-kbd">
-            <span>San Diego, CA</span>
-            <span>Available for work</span>
+            <span>{LOCATION}</span>
+            <span>{STATUS}</span>
           </div>
         </div>
       </div>

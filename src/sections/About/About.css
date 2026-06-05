@@ -56,28 +56,12 @@
   font-weight: 500;
 }
 
+/* Row container; individual figures are the Stat component (components/Stat). */
 .about-meta {
   display: flex;
   gap: 38px;
   margin-top: 30px;
   flex-wrap: wrap;
-}
-
-.about-meta .n {
-  font-family: var(--display);
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -.02em;
-}
-
-.about-meta .n .grad-text {
-  display: inline;
-}
-
-.about-meta .l {
-  font-size: 13px;
-  color: var(--fg-3);
-  margin-top: 2px;
 }
 
 @media (max-width: 900px) {

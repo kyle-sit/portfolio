@@ -1,0 +1,16 @@
+.stat-n {
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.stat-n .grad-text {
+  display: inline;
+}
+
+.stat-l {
+  font-size: 13px;
+  color: var(--fg-3);
+  margin-top: 2px;
+}

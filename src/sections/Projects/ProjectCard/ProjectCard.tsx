@@ -1,21 +1,16 @@
-import { Icon } from "../Icon";
-import { projects } from "../../data/projects";
-import { isVideo } from "../../utils/media";
-import type { MediaItem, Project } from "../../types";
-import "./Projects.css";
+import { Icon } from "../../../components/Icon";
+import { Tag } from "../../../components/Tag";
+import { IconLink } from "../../../components/IconLink";
+import { Media } from "../Media";
+import type { Project } from "../../../types";
 
 const TAG_MAX = 4;
+const PLACEHOLDER_LABEL = "Interface demo";
+const PLACEHOLDER_SUB = "mp4 · not in public repo";
+const LIVE_LABEL = "View live";
+const SOURCE_LABEL = "Source";
 
-function Media({ item, alt }: { item: MediaItem; alt: string }) {
-  if (isVideo(item.src)) {
-    return (
-      <video src={item.src} autoPlay loop muted playsInline preload="metadata" />
-    );
-  }
-  return <img src={item.src} alt={alt} loading="lazy" />;
-}
-
-function ProjectCard({ p }: { p: Project }) {
+export function ProjectCard({ p }: { p: Project }) {
   const shown = p.tech.slice(0, TAG_MAX);
   const extra = p.tech.length - shown.length;
   const cover = p.media[0];
@@ -34,8 +29,8 @@ function ProjectCard({ p }: { p: Project }) {
         ) : (
           <div className="ph">
             <span className="play">▶</span>
-            <span className="lbl">Interface demo</span>
-            <span className="sub">mp4 · not in public repo</span>
+            <span className="lbl">{PLACEHOLDER_LABEL}</span>
+            <span className="sub">{PLACEHOLDER_SUB}</span>
           </div>
         )}
       </div>
@@ -44,11 +39,9 @@ function ProjectCard({ p }: { p: Project }) {
         <p className="card-blurb">{p.summary}</p>
         <div className="card-tags">
           {shown.map((t) => (
-            <span key={t} className="tag">
-              {t}
-            </span>
+            <Tag key={t}>{t}</Tag>
           ))}
-          {extra > 0 && <span className="tag more">+{extra}</span>}
+          {extra > 0 && <Tag more>+{extra}</Tag>}
         </div>
         {p.highlights && p.highlights.length > 0 && (
           <ul className="card-hl">
@@ -79,43 +72,17 @@ function ProjectCard({ p }: { p: Project }) {
         )}
         <div className="card-links">
           {p.liveUrl && (
-            <a className="clink pri" href={p.liveUrl} target="_blank" rel="noreferrer">
-              View live <Icon.arrow className="ico" />
-            </a>
+            <IconLink href={p.liveUrl} variant="primary">
+              {LIVE_LABEL} <Icon.arrow className="ico" />
+            </IconLink>
           )}
           {p.repoUrl && (
-            <a className="clink" href={p.repoUrl} target="_blank" rel="noreferrer">
-              <Icon.github style={{ width: 15, height: 15 }} /> Source
-            </a>
+            <IconLink href={p.repoUrl}>
+              <Icon.github style={{ width: 15, height: 15 }} /> {SOURCE_LABEL}
+            </IconLink>
           )}
         </div>
       </div>
     </article>
-  );
-}
-
-export function Projects() {
-  return (
-    <section className="sec" id="projects">
-      <div className="wrap">
-        <div className="sec-head rv">
-          <span className="kicker">
-            <span className="g">01</span> Featured Work
-          </span>
-          <h2 className="sec-title">
-            Things I've <span className="grad-text">built</span>.
-          </h2>
-          <p className="sec-sub">
-            A mix of production engineering at Amazon and personal products taken from idea to
-            ship.
-          </p>
-        </div>
-        <div className="proj-grid">
-          {projects.map((p) => (
-            <ProjectCard key={p.title} p={p} />
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }

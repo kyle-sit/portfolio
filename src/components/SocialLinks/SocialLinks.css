@@ -1,0 +1,29 @@
+.social-links {
+  margin-top: 34px;
+  display: flex;
+  gap: 12px;
+}
+
+.soc {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-2);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--fg-2);
+  transition: transform .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
+}
+
+.soc:hover {
+  transform: translateY(-3px);
+  color: #fff;
+  border-color: var(--accent);
+  background: rgba(124, 58, 237, 0.14);
+}
+
+.soc svg {
+  width: 19px;
+  height: 19px;
+}

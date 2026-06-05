@@ -1,0 +1,20 @@
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 15, 18, 0.82);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  padding: 9px 13px;
+  font-size: 12.5px;
+  box-shadow: 0 16px 30px -14px rgba(0, 0, 0, .7);
+}
+
+.chip .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+}

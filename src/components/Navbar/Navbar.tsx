@@ -3,6 +3,8 @@ import { nav } from "../../data/nav";
 import { assetUrl, scrollToId } from "../../utils/scroll";
 import "./Navbar.css";
 
+const BRAND = "Kyle Sit";
+
 interface NavbarProps {
   active: string;
 }
@@ -31,7 +33,7 @@ export function Navbar({ active }: NavbarProps) {
           <span className="mark">
             <img src={assetUrl("favicon.svg")} alt="" />
           </span>{" "}
-          Kyle Sit
+          {BRAND}
         </a>
         <div className="nav-links">
           {nav.map((n) => (
