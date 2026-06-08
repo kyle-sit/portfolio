@@ -8,7 +8,7 @@ const BRAND = "Kyle Sit";
 const NAV_HEADING = "Navigate";
 const CONNECT_HEADING = "Connect";
 const COPYRIGHT_TAGLINE = "built with intent.";
-const LOCATION = "San Diego, CA";
+const LOCATION = "San Diego / San Francisco, CA";
 const STATUS = "Available for work";
 
 export function Footer() {

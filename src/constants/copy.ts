@@ -17,4 +17,4 @@ export const CONTACT_MESSAGE =
   "Have a project, a role, or an idea worth chasing? My inbox is always open.";
 
 export const FOOTER_DESCRIPTION =
-  "Software engineer based in San Diego, building modern interfaces and AI-backed tools with tangible impact.";
+  "Software engineer based in San Diego / San Francisco, building modern interfaces and AI-backed tools with tangible impact.";
