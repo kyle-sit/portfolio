@@ -1,17 +1,16 @@
 export interface MediaItem {
   src: string;
   layout: "desktop" | "mobile";
-  title?: string;
-  description?: string;
 }
 
 export interface Project {
   kind: "Professional" | "Personal";
   title: string;
-  summary: string;
-  media: MediaItem[];
+  description: string;
+  media: MediaItem;
   tech: string[];
   highlights?: string[];
+  notes?: string[];
   liveUrl?: string;
   repoUrl?: string;
 }

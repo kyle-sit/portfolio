@@ -12,11 +12,9 @@ import "./Hero.css";
 const FIRST_NAME = "Kyle";
 const LAST_NAME = "Sit";
 const PRIMARY_CTA = "View my work";
-const SECONDARY_CTA = "Get in touch";
 const PROJECTS_SECTION = "projects";
-const EMAIL_HREF = "mailto:kyle.sit.sd@gmail.com";
 const STATUS_CHIP = "Open to work";
-const LOCATION_CHIP = "San Diego, CA";
+const LOCATION_CHIP = "San Diego / San Francisco, CA";
 const SCROLL_HINT = "Scroll";
 
 export function Hero() {
@@ -52,7 +50,6 @@ export function Hero() {
                 scrollToId(PROJECTS_SECTION);
               }}
             />
-            <Button label={SECONDARY_CTA} variant="ghost" href={EMAIL_HREF} />
           </ButtonRow>
           <SocialLinks className="rv in d4" />
         </div>
