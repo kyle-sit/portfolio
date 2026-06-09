@@ -1,7 +1,7 @@
 import { nav } from "../../data/nav";
 import { socials } from "../../data/socials";
 import { assetUrl } from "../../utils/scroll";
-import { FOOTER_DESCRIPTION } from "../../constants/copy";
+import { FOOTER_DESCRIPTION } from "../../constants/excerpts";
 import "./Footer.css";
 
 const BRAND = "Kyle Sit";

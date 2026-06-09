@@ -1,7 +1,7 @@
 import { SectionHeading } from "../../components/SectionHeading";
 import { ProjectCard } from "./ProjectCard";
 import { projects } from "../../data/projects";
-import { PROJECTS_SUBTITLE } from "../../constants/copy";
+import { PROJECTS_SUBTITLE } from "../../constants/excerpts";
 import "./Projects.css";
 
 const KICKER_NUM = "01";

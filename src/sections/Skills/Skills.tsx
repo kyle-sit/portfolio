@@ -1,7 +1,7 @@
 import { SectionHeading } from "../../components/SectionHeading";
 import { SkillItem } from "./SkillItem";
 import { skills } from "../../data/skills";
-import { SKILLS_SUBTITLE } from "../../constants/copy";
+import { SKILLS_SUBTITLE } from "../../constants/excerpts";
 import "./Skills.css";
 
 const KICKER_NUM = "02";

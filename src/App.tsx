@@ -4,7 +4,6 @@ import { Hero } from "./sections/Hero";
 import { Projects } from "./sections/Projects";
 import { Skills } from "./sections/Skills";
 import { About } from "./sections/About";
-import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 import { useScrollSpy, useReveal } from "./hooks";
 import { nav } from "./data/nav";
@@ -34,7 +33,6 @@ function App() {
         <Projects />
         <Skills />
         <About />
-        <Contact />
       </main>
       <Footer />
     </div>

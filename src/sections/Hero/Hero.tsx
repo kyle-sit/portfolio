@@ -5,7 +5,7 @@ import { Chip } from "../../components/Chip";
 import { useTypewriter } from "../../hooks";
 import { roles } from "../../data/roles";
 import { scrollToId } from "../../utils/scroll";
-import { HERO_BLURB } from "../../constants/copy";
+import { HERO_BLURB } from "../../constants/excerpts";
 import profilePic from "../../assets/profile-pic.png";
 import "./Hero.css";
 
