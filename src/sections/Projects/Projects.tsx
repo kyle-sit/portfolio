@@ -26,7 +26,7 @@ export function Projects() {
 
         <div className="proj-group">
           <h3 className="proj-group-title rv">{PROFESSIONAL_LABEL}</h3>
-          <div className="proj-grid">
+          <div className="proj-grid rv">
             {professional.map((p) => (
               <ProjectCard key={p.title} p={p} />
             ))}
@@ -35,7 +35,7 @@ export function Projects() {
 
         <div className="proj-group">
           <h3 className="proj-group-title rv">{PERSONAL_LABEL}</h3>
-          <div className="proj-grid">
+          <div className="proj-grid rv">
             {personal.map((p) => (
               <ProjectCard key={p.title} p={p} />
             ))}

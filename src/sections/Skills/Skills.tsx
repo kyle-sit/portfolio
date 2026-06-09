@@ -18,9 +18,9 @@ export function Skills() {
           title={<>The <span className="grad-text">toolkit</span>.</>}
           subtitle={SKILLS_SUBTITLE}
         />
-        <div className="skill-cols">
-          {skills.map((cat, i) => (
-            <div key={cat.cat} className={"skill-cat rv d" + (i + 1)}>
+        <div className="skill-cols rv">
+          {skills.map((cat) => (
+            <div key={cat.cat} className="skill-cat">
               <h4>{cat.cat}</h4>
               <div className="skill-list">
                 {cat.items.map((s) => (

@@ -9,7 +9,7 @@ const SOURCE_LABEL = "Source";
 
 export function ProjectCard({ p }: { p: Project }) {
   return (
-    <article className="card rv">
+    <article className="card">
       <div className={"card-media" + (p.media.layout === "mobile" ? " is-mobile" : "")}>
         <Media item={p.media} alt={p.title} />
       </div>
