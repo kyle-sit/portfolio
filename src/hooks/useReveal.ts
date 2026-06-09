@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 /** Adds the `.in` class to `.rv` elements as they scroll into view. */
-export function useReveal(dep: unknown): void {
+export function useReveal(): void {
   useEffect(() => {
     const els = Array.from(document.querySelectorAll(".rv"));
     const obs = new IntersectionObserver(
@@ -18,5 +18,5 @@ export function useReveal(dep: unknown): void {
       if (!el.classList.contains("in")) obs.observe(el);
     });
     return () => obs.disconnect();
-  }, [dep]);
+  }, []);
 }
