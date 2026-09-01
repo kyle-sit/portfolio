@@ -1,5 +1,6 @@
 import type { Project } from "../types";
 import creHome from "../assets/cre-platform-home.png";
+import personalAgentsHome from "../assets/personal-agents-home.png";
 import rendezvousHome from "../assets/rendezvous-home.png";
 
 const video = (name: string) => `${import.meta.env.BASE_URL}videos/${name}`;
@@ -86,6 +87,20 @@ export const projects: Project[] = [
       "Designing a custom MCP server so agents can act on live deal data.",
     ],
     repoUrl: "https://github.com/cn-hp/cre-platform",
+  },
+  {
+    kind: "Personal",
+    title: "Personal Agents",
+    description:
+      "A web app for defining custom AI agents and chatting with them, built to understand how agents work from the ground up. The model/tool loop is hand-written rather than delegated to an SDK's agent harness — which also lets it drive any OpenAI-compatible provider.",
+    media: { src: personalAgentsHome, layout: "desktop" },
+    tech: ["TypeScript", "Next.js", "React", "SQLite", "Drizzle ORM", "Zod", "Tailwind CSS", "Vitest"],
+    highlights: [
+      "Hand-rolled agent loop with streaming, parallel tool dispatch, cancellation, and per-run cost ceilings.",
+      "One provider adapter speaks OpenAI Chat Completions, so Together, Bedrock, Fireworks, Groq, vLLM, and Ollama differ only by config.",
+      "Tools declared once with Zod — one schema drives runtime validation, TypeScript inference, and the JSON Schema sent to the model.",
+    ],
+    repoUrl: "https://github.com/kyle-sit/personal-agents",
   },
   {
     kind: "Personal",
